@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1115;
+    display: flex;
+    justify-content: center; /* Horizontally centers the container */
+    align-items: center;
+    height: 100vh;
+    font-family: "Kanit", serif;
+}
+
+#profile_card{
+    width: 25%; 
+    height: 80vh; 
+    border-radius: 15px;
+    background-color: #212121;
+}
+
+
+.profile_card_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+img{
+    border-radius: 50%;
+    width: 35%;
+    
+}
+
+#name{
+    color: white;
+    margin-top: 1.5%;
+}
+#location{
+    color: yellow;
+    margin-top: 1.5%;
+}
+
+#designation{
+    color: white;
+    margin-top: 5%;
+}
+
+
+#profile_card_buttons{
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 90%;
+    margin-top: 5%;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: #30312f;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #8ec359;   /* Change background on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Bigger shadow for more depth */
+    transform: translateY(-4px) scale(1.2); /* Lift and scale up the button */
+    transition: all 0.3s ease-in-out;  /* Smooth and slower transition */
+}
+
+/* For tablets (screens between 600px and 900px) */
+@media (max-width: 600px) and (min-width: 900px) {
+    #profile_card {
+        width: 50%; /* Make the card take more width */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    img {
+        width: 45%; /* Adjust image size */
+    }
+
+    button {
+        width: 95%; /* Buttons take a larger percentage of width */
+        font-size: 0.9em; /* Slightly smaller text size */
+    }
+}
+
+/* For mobile devices (screens smaller than 600px) */
+@media (max-width: 600px) {
+    #profile_card {
+        width: 80%; /* Take more space on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .profile_card_header {
+        padding: 10%; /* Increase padding for better spacing */
+    }
+
+    img {
+        width: 55%; /* Adjust image size for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Buttons take full width */
+        font-size: 0.8em; /* Adjust font size */
+        padding: 4%; /* Slightly larger padding for touch devices */
+    }
+}
